@@ -1,0 +1,19 @@
+<form #inputForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        First Name:
+        <input [(ngModel)]="x.firstName" name="firstName"
+        #firstName="ngModel" type="text">
+    </label>
+
+    <ng-select #select (change)="onChange($event)" [items]="companies"
+            name="selectName"
+            [addTagText]="ghjgh"
+           [addTag]="true"
+           [(ngModel)]="x.selectName"
+           [hideSelected]="false"
+           bindLabel="selectName"> </ng-select>
+
+    <button > Submit </button>
+  
+  </form>
